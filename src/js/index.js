@@ -97,3 +97,8 @@ document
     showById("history-page", "show-donation");
     event.target.classList.add("bg-primary");
   });
+
+// send blog page when click to blog-page-btn
+document.getElementById("blog-page-btn").addEventListener("click", function () {
+  window.location.href = "src/blog.html";
+});
