@@ -9,7 +9,9 @@ function getAmountById(id) {
 function getInputAmount(id) {
   const inputValue = document.getElementById(id).value;
   const float_inputValue = parseFloat(inputValue);
-  return float_inputValue;
+  if (!isNaN(float_inputValue) && float_inputValue.toString() === inputValue) {
+    return float_inputValue;
+  }
 }
 
 // Function for Adding donate;

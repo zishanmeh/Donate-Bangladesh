@@ -7,7 +7,11 @@ document
     const amount = getInputAmount("amount-for-noakhali");
     const total_noakhali_donation = getAmountById("total_noakhali_donation");
     // Validation
-    if (amount > availableBalance || amount <= 0 || isNaN(amount) === true) {
+    if (
+      amount > availableBalance ||
+      amount <= 0 ||
+      isNaN(Number(amount)) === true
+    ) {
       alert("Invalid input! Please check!!!");
       document.getElementById("amount-for-noakhali").value = "";
       return;
