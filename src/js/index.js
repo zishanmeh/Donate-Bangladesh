@@ -51,6 +51,8 @@ document
     const newTime = new Date();
     const heading = document.getElementById("feni_heading").innerText;
     addDonationHistory(newTime, amount, heading);
+    // showing model
+    modal.showModal();
   });
 
 //   Donate for injured
@@ -78,6 +80,8 @@ document.getElementById("quota-btn").addEventListener("click", function () {
   const newTime = new Date();
   const heading = document.getElementById("quota_heading").innerText;
   addDonationHistory(newTime, amount, heading);
+  // showing model
+  modal.showModal();
 });
 
 // Clicking show donation btn

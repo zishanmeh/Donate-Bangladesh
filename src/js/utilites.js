@@ -30,6 +30,7 @@ function addDonate(
 
 function addDonationHistory(time, donate_amount, heading) {
   const historyPage = document.getElementById("history-page");
+  historyPage.innerHTML = "";
   historyPage.innerHTML += `
     <div class="border border-dark3 p-3 rounded-lg shadow-md w-full mb-4">
         <h1 class="text-2xl font-bold text-dark mb-3">${donate_amount} Taka has been ${heading}</h1>
