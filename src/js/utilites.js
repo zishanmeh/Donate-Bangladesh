@@ -37,3 +37,11 @@ function addDonationHistory(time, donate_amount, heading) {
     </div>
     `;
 }
+
+// Hide and show history and donation page
+function showById(id, btnId) {
+  document.getElementById("donation-page").classList.add("hidden");
+  document.getElementById("history-page").classList.add("hidden");
+  document.getElementById(btnId).classList.remove("bg-primary");
+  document.getElementById(id).classList.remove("hidden");
+}

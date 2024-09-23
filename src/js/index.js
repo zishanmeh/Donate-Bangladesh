@@ -1,5 +1,5 @@
 // Donate Noakhali
-
+const modal = document.getElementById("my_modal_1");
 document
   .getElementById("donate-noakhali")
   .addEventListener("click", function () {
@@ -9,6 +9,7 @@ document
     // Validation
     if (amount > availableBalance || amount <= 0 || isNaN(amount) === true) {
       alert("Invalid input! Please check!!!");
+      document.getElementById("amount-for-noakhali").value = "";
       return;
     }
 
@@ -24,6 +25,9 @@ document
     const newTime = new Date();
     const heading = document.getElementById("noakhali_heading").innerText;
     addDonationHistory(newTime, amount, heading);
+
+    // showing model
+    modal.showModal();
   });
 
 //   Donate feni
@@ -36,6 +40,7 @@ document
     const total_donation = getAmountById("total_feni_donation");
     // Validation
     if (amount > availableBalance || amount <= 0 || isNaN(amount) === true) {
+      document.getElementById("amount-for-feni").value = "";
       alert("Invalid input! Please check!!!");
       return;
     }
@@ -56,6 +61,7 @@ document.getElementById("quota-btn").addEventListener("click", function () {
   //   Validation
   // Validation
   if (amount > availableBalance || amount <= 0 || isNaN(amount) === true) {
+    document.getElementById("amount-for-injured").value = "";
     alert("Invalid input! Please check!!!");
     return;
   }
@@ -73,3 +79,17 @@ document.getElementById("quota-btn").addEventListener("click", function () {
   const heading = document.getElementById("quota_heading").innerText;
   addDonationHistory(newTime, amount, heading);
 });
+
+// Clicking show donation btn
+document
+  .getElementById("show-donation")
+  .addEventListener("click", function (event) {
+    showById("donation-page", "show-history");
+    event.target.classList.add("bg-primary");
+  });
+document
+  .getElementById("show-history")
+  .addEventListener("click", function (event) {
+    showById("history-page", "show-donation");
+    event.target.classList.add("bg-primary");
+  });
