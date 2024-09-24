@@ -1,8 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Font awesome kit -->
+    <script
+      src="https://kit.fontawesome.com/7d97467ebb.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Donate Bangladesh Blog</title>
     <!-- Daisy UI + Tailwind Css CDN LInk -->
     <link
@@ -14,164 +19,78 @@
   </head>
   <body>
     <header class="my-6 p-4">
-      <h1 class="text-center text-4xl font-bold underline">Blog</h1>
+      <div class="flex justify-center items-center gap-3">
+        <h1 class="text-center text-4xl font-bold underline">Important FAQ</h1>
+        <i class="fa-brands fa-pagelines fa-bounce text-4xl"></i>
+      </div>
     </header>
-    <main class="w-11/12 mx-auto">
-      <ul
-        class="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical"
-      >
-        <li>
-          <div class="timeline-middle">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-              class="h-5 w-5"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-                clip-rule="evenodd"
-              />
-            </svg>
+    <main class="w-11/12 mx-auto md:w-1/2">
+      <div>
+        <div class="collapse collapse-arrow bg-base-200">
+          <input type="radio" name="my-accordion-2" checked="checked" />
+          <div class="collapse-title text-xl font-medium">
+            What is the Document Object Model (DOM)?
           </div>
-          <div class="timeline-start mb-10 md:text-end">
-            <time class="font-mono italic">Question: 1</time>
-            <div class="text-lg font-black">
-              What is the Document Object Model (DOM)?
-            </div>
-            Document object model represents the structure of a web page as a
-            tree of objects, allowing developers to interact with and manipulate
-            the content, structure, and style of a webpage using programming
-            languages like JavaScript.
+          <div class="collapse-content">
+            <p>
+              Document object model represents the structure of a web page as a
+              tree of objects, allowing developers to interact with and
+              manipulate the content, structure, and style of a webpage using
+              programming languages like JavaScript.
+            </p>
           </div>
-          <hr />
-        </li>
-        <li>
-          <hr />
-          <div class="timeline-middle">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-              class="h-5 w-5"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-                clip-rule="evenodd"
-              />
-            </svg>
+        </div>
+        <div class="collapse collapse-arrow bg-base-200">
+          <input type="radio" name="my-accordion-2" />
+          <div class="collapse-title text-xl font-medium">
+            How do you select an element from the DOM?
           </div>
-          <div class="timeline-end mb-10">
-            <time class="font-mono italic">Question: 2</time>
-            <div class="text-lg font-black">
-              How do you select an element from the DOM?
-            </div>
-            There are bunch of different ways to select an element with from DOM
-            with js. Most commonly using selector is
-            <span class="font-bold">getElementById()</span>. Although
-            <span class="font-bold">querySelectorAll()</span> is also highly
-            using by programmers. Other two are
-            <span class="font-bold">getElementByTagName()</span> and
-            <span class="font-bold">getElementByClassName()</span> are also use
-            preety much.
+          <div class="collapse-content">
+            <p>
+              There are bunch of different ways to select an element with from
+              DOM with js. Most commonly using selector is
+              <span class="font-bold">getElementById()</span>. Although
+              <span class="font-bold">querySelectorAll()</span> is also highly
+              using by programmers. Other two are
+              <span class="font-bold">getElementByTagName()</span> and
+              <span class="font-bold">getElementByClassName()</span> are also
+              use preety much.
+            </p>
           </div>
-          <hr />
-        </li>
-        <li>
-          <hr />
-          <div class="timeline-middle">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-              class="h-5 w-5"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-                clip-rule="evenodd"
-              />
-            </svg>
+        </div>
+        <div class="collapse collapse-arrow bg-base-200">
+          <input type="radio" name="my-accordion-2" />
+          <div class="collapse-title text-xl font-medium">
+            What is event delegation in the context of the DOM, and why is it
+            useful?
           </div>
-          <div class="timeline-start mb-10 md:text-end">
-            <time class="font-mono italic">Question3: </time>
-            <div class="text-lg font-black">
-              What is event delegation in the context of the DOM, and why is it
-              useful?
-            </div>
-            One of the beautiful things in Javascript is event delegation. If
-            you need to select multiple item in a section you don't need to
-            select every item individually. Just select parent element which
-            will listen for event triggered by it's children.
+          <div class="collapse-content">
+            <p>
+              One of the beautiful things in Javascript is event delegation. If
+              you need to select multiple item in a section you don't need to
+              select every item individually. Just select parent element which
+              will listen for event triggered by it's children.
+            </p>
           </div>
-          <hr />
-        </li>
-        <li>
-          <hr />
-          <div class="timeline-middle">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-              class="h-5 w-5"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-                clip-rule="evenodd"
-              />
-            </svg>
+        </div>
+        <div class="collapse collapse-arrow bg-base-200">
+          <input type="radio" name="my-accordion-2" />
+          <div class="collapse-title text-xl font-medium">
+            How do you manipulate an element's attributes and styles using the
+            DOM?
           </div>
-          <div class="timeline-end mb-10">
-            <time class="font-mono italic">Question4:</time>
-            <div class="text-lg font-black">
-              How do you manipulate an element's attributes and styles using the
-              DOM?
-            </div>
-            To manipulate an element's attributes in the DOM, you can use
-            methods like `getAttribute()`, `setAttribute()`, and
-            `removeAttribute()` to retrieve, set, or remove attributes,
-            respectively. Additionally, certain attributes like `id`, `href`,
-            and `src` can be accessed or modified directly as properties. For
-            example, `element.src = 'new-image.jpg'` changes an image's source
-            directly. For styling, the `style` property allows you to modify an
-            element's inline styles, like `element.style.backgroundColor =
-            'blue'`, while `classList` can be used to add, remove, or toggle CSS
-            classes.
+          <div class="collapse-content">
+            <p>
+              To manipulate an element's attributes in the DOM, I can use
+              methods like <span class="font-bold">getAttribute()</span>,
+              <span class="font-bold">setAttribute()</span> to set, or remove
+              attributes. Attributes like id, src, href can be accessed or
+              modified directly as properties. For example, `element.src =
+              'new-image.jpg'` changes an image's source directly.
+            </p>
           </div>
-          <hr />
-        </li>
-        <li>
-          <hr />
-          <div class="timeline-middle">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-              class="h-5 w-5"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-                clip-rule="evenodd"
-              />
-            </svg>
-          </div>
-          <div class="timeline-start mb-10 md:text-end">
-            <time class="font-mono italic">Question5</time>
-            <div class="text-lg font-black">
-              what is nodelist collection in html
-            </div>
-            A NodeList is a collection of document nodes (element nodes,
-            attribute nodes, and text nodes). HTMLCollection items can be
-            accessed by their name, id, or index number. NodeList items can only
-            be accessed by their index number. An HTMLCollection is always a
-            live collection.
-          </div>
-        </li>
-      </ul>
+        </div>
+      </div>
     </main>
   </body>
 </html>
